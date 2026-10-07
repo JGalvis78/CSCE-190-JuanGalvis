@@ -1,0 +1,27 @@
+1. Requirements (for the client)
+
+- Students can see their monthly spending sorted into categories (food, rent, books, etc.).
+- Students can set a monthly budget for each category.
+- Students get a warning when they're close to or over a budget.
+- Students can see upcoming big expenses (like textbooks or rent) ahead of time.
+- Students can set aside "emergency money" for unexpected situations.
+- The tool must be free or low-cost and easy enough to use in under 5 minutes a week.
+- Students' financial data must be kept private.
+
+2. Specification (for developers)
+
+- The system lets a user manually enter an expense with an amount, date, and category.
+- The system caulcualtes the total spending per category per month and displays it as a chart and a table (easy to understand).
+- The user can set a budget limit per category. If the spending gets to 80% of the limit, the system sends a warning, and at 100% it shows an "over budget" alert, along with providing tips on how to stay under budget in the future.
+- The user can add a recurring expense (such as rent or suscriptions) and the system adds it automatically each month.
+- The system stores data per user and requires a login to access it, F2A, and other secuirty systems.
+- Inputs: expense values, budget limits. Outputs: monthly summary, alerts, advice.
+
+3. Test Plan
+- Test: Add expense, Action: Enter $10.50 "Food" and date, Expected Result: Appears in the Food total and the list.
+- Test: Category total. Action: Add three Food expenses. Expected Result: Food total equals their sum.
+- Test: 80% warning. Action: Budget $100, spend $80. Expected Result:	Warning appears.
+- Test: Over budget. Action: Budget $100, spend $101. Expected Result: "Over budget" alert appears.
+- Test: Recurring expense. Action: Add $500 rent on the 1st. Expected Result: Appears automatically next month.
+- TestA: Invalid input. Action:	Enter a negative or blank amount. Expected Result: Rejected with an error message.
+- Test: Privacy. Action:	Log in as a different user. Expected Result: Cannot see the first user's data.
